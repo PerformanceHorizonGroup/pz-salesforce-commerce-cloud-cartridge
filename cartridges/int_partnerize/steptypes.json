@@ -1,0 +1,39 @@
+{
+	"step-types": {
+        "chunk-script-module-step": [
+            {
+                "@type-id": "custom.PartnerizeOrderSync",
+                "@supports-parallel-execution": "false",
+                "@supports-site-context": "true",
+                "@supports-organization-context": "false",
+                "description": "Update Partnerize Order status",
+                "module": "int_partnerize/cartridge/scripts/job/partnerizeOrderSync.js",
+                "before-step-function": "beforeStep",
+                "total-count-function": "",
+                "before-chunk-function": "",
+                "read-function": "read",
+                "process-function": "process",
+                "write-function": "write",
+                "after-chunk-function": "",
+                "after-step-function": "afterStep",
+                "chunk-size": 10,
+                "transactional": "true",
+                "parameters": {
+                    "parameter": [],
+                    "status-codes": {
+                        "status": [
+                            {
+                                "@code": "ERROR",
+                                "description": "Used when the step failed with an error."
+                            },
+                            {
+                                "@code": "OK",
+                                "description": "Used when the step finished successfully."
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

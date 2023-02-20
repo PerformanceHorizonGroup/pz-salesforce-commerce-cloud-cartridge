@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="partnerize_Enable">
+                <display-name xml:lang="x-default">Enable Partnerize</display-name>
+                <description xml:lang="x-default">Enable/disable all Partnerize functionality</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>false</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="partnerize_application_api_key">
+                <display-name xml:lang="x-default">Partnerize Application Api Key</display-name>
+                <description xml:lang="x-default">Partnerize Application Api Key</description>
+                <type>password</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="partnerize_user_key">
+                <display-name xml:lang="x-default">Partnerize User Key</display-name>
+                <description xml:lang="x-default">Partnerize User Key</description>
+                <type>password</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="partnerize_brand_id">
+                <display-name xml:lang="x-default">Partnerize Brand ID</display-name>
+                <description xml:lang="x-default">Partnerize Brand ID</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="partnerize_campaign_id">
+                <display-name xml:lang="x-default">Partnerize Campaign ID</display-name>
+                <description xml:lang="x-default">Partnerize Campaign ID</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="partnerize_tag_url">
+                <display-name xml:lang="x-default">Partnerize Tag URL</display-name>
+                <description xml:lang="x-default">Partnerize Tag URL</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>true</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="partnerize_conversion_root">
+                <display-name xml:lang="x-default">Partnerize Conversion Pixel Root</display-name>
+                <description xml:lang="x-default">Partnerize Conversion Pixel Root</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>true</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>https://prf.hn/conversion</default-value>
+            </attribute-definition>
+		</custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Partnerize">
+                <display-name xml:lang="x-default">Partnerize</display-name>
+                <attribute attribute-id="partnerize_Enable"/>
+                <attribute attribute-id="partnerize_application_api_key"/>
+                <attribute attribute-id="partnerize_user_key"/>
+                <attribute attribute-id="partnerize_brand_id"/>
+                <attribute attribute-id="partnerize_campaign_id"/>
+                <attribute attribute-id="partnerize_tag_url"/>
+                <attribute attribute-id="partnerize_conversion_root"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+	<type-extension type-id="Order">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="partnerize_synced">
+                <display-name xml:lang="x-default">Partnerize Synced</display-name>
+                <description xml:lang="x-default">Indicates if order was Partnerize synced</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>true</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Partnerize">
+                <display-name xml:lang="x-default">Partnerize</display-name>
+                <attribute attribute-id="partnerize_synced"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+</metadata>

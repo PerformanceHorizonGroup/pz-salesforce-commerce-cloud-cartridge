@@ -1,0 +1,90 @@
+.form {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.form td {
+	padding: 0 1em 1em 1em;
+	width: 50%;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.form input[type=text], input[type=password] {
+	display: block;
+	width: 100%;
+	height: 2.5em;
+	padding: 1em 2em !important;
+	box-sizing: border-box;
+	font-size: 1.2em;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 0.2rem solid #ccc;
+	border-radius: 0.5rem;
+	box-shadow: inset 0 0.1rem 0.1rem rgba(0, 0, 0, .075);
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	margin: 1rem 0 2rem 0 !important;
+}
+
+.button {
+	background-color: #0094FF !important;
+	border-radius: 0.5rem !important;
+	color: white !important;
+	padding: 1rem 2rem !important;
+	font-size: 1.7rem;
+}
+
+.subheader {
+	font-size: 1.7rem;
+	color: #333;
+	margin-bottom: 0;
+}
+
+.hint {
+	display: block;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+	color: #737373;
+}
+
+.label {
+	display: inline-block;
+	max-width: 100%;
+	font-weight: bold;
+	color: #333;
+	font-size: 1.7rem;
+}
+
+.required {
+	color: red;
+}
+
+.error-bar,
+.success-bar {
+	width: 60%;
+	margin: 0 auto 1rem auto;
+	padding: 1.5rem;
+	text-align: center;
+	box-sizing: border-box;
+	color: white;
+	font-size: 1.3em;
+}
+
+.error-bar {
+	background-color: #ff4a4e;
+}
+
+.success-bar {
+	background-color: #5cb85c;
+}
+
+.l {
+	background-color: #EEEEEE;
+}
+
+.r {
+	background-color: #EEEEEE;
+	text-align: left !important;
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jobs xmlns="http://www.demandware.com/xml/impex/jobs/2015-07-01">
+    <job job-id="PartnerizeOrderSync" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="RefArch"/>
+            <step step-id="partnerizeOrderSync" type="custom.PartnerizeOrderSync" enforce-restart="false">
+                <description>Update Partnerize Order status and send status order to Partnerize service</description>
+                <parameters/>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2021-02-16Z</date>
+                <time>09:03:23.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+</jobs>
