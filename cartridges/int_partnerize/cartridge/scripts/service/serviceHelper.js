@@ -97,10 +97,15 @@ function callService(title, service, params) {
 /**
  * Check if response type is JSON
  * @param {dw.svc.HTTPService} service - Service to obtain client from
- * @returns {boolean}                  - boolean if `Content-Type` is `application/json`
+ * @returns {boolean}                  - true if `Content-Type` is `application/json`
  */
 function isResponseJSON(service) {
-    var contentTypeHeader = service.getClient().getResponseHeader('Content-Type');
+    var contentTypeHeader = service.getClient().getResponseHeader('content-type'); // Partnerize returns lowercase header names in 2023
+
+    if (contentTypeHeader === null) {
+        contentTypeHeader = service.getClient().getResponseHeader('Content-Type'); // try camel case
+    }
+
     return contentTypeHeader && contentTypeHeader.split(';')[0].toLowerCase() === 'application/json';
 }
 
